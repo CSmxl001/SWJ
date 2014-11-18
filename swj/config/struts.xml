@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>   
+  <!-- develop config start -->  
+  <constant name="struts.configuration.xml.reload" value="true"/>  
+  <constant name="struts.serve.static.browserCache" value="false"/>  
+  <constant name="struts.devMode" value="true"/>  
+  <constant name="struts.i18n.reload" value="true"/>  
+  <!-- develop config end -->  
+  <constant name="struts.locale" value="zh_CN"/>  
+  <constant name="struts.i18n.encoding" value="utf-8"/>  
+  <constant name="struts.custom.i18n.resources" value="messageResource"/>  
+  <constant name="struts.action.extension" value="htm"/>  
+  <constant name="struts.ognl.allowStaticMethodAccess" value="true"/>  
+  <constant name="struts.enable.SlashesInActionNames" value="true"/>  
+  <constant name="struts.enable.DynamicMethodInvocation" value="true"/>  
+  <constant name="struts.custom.i18n.resources" value="messageResource"/>  
+  <constant name="struts.enable.SlashesInActionNames" value="true"/>  
+  <constant name="struts.mapper.alwaysSelectFullNamespace" value="false"/> 
+  <!-- convention -->
+  <constant name="struts.convention.action.disableJarScanning" value="true" />
+  <constant name="struts.convention.action.fileProtocols" value="jar,wsjar" />
+  <constant name="struts.convention.action.includeJars" value=".*?/struts2-action*.*?jar(!/)?" />
+  <constant name="struts.convention.action.packages" value="com.swj.action" />
+   
+  <!-- 
+  <package name="struts-rain" extends="struts-default" namespace="/" abstract="">    
+    <global-results> 
+      <result name="login"><![CDATA[/login.jsp]]></result>  
+      <result name="admin"><![CDATA[/admin.jsp]]></result>  
+      <result name="error"><![CDATA[/error.jsp]]></result> 
+    </global-results>    
+  </package>  
+   -->
+  <!-- 
+  使用注释时要关闭
+	<include file="struts-common.xml"></include>	 
+  	<include file="struts-test.xml"/>  
+  	<include file="struts-acm.xml"/>
+   
+  <include file="struts-ums.xml"/>
+  --> 
+</struts>

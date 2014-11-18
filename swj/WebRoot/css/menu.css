@@ -1,0 +1,35 @@
+body{position:relative;line-height:20px;background-color:#f5f7fa;margin:0px auto;font-size:14px;}
+/*页头样式*/
+.swj_header {width:960px;margin:0 auto ;border-bottom: 2px solid #CC0000;}
+.swj_header:after{line-height:0;display:table;}
+.swj_header_right {color:#979693;font-family: '微软雅黑','宋体','黑体',Arial;font-size: 12px;width:auto;float:right;}
+.swj_header_right a{color:#979693;outline:0 none;text-decoration:none;}
+/*菜单样式
+.c_subNav {margin:0 auto;width:960px;}
+.c_subNav ul { font:12px verdana, arial, sans-serif; }
+.c_subNav ul,li {list-style:none;padding:0; margin:0;}
+.c_subNav li { float:left; }         
+.c_subNav li a {display:block;padding:8px 50px;background:#3A4953;color:#fff;text-decoration:none;border-right:1px solid #000;}
+.c_subNav li a:hover {background:#146C9C;color:#fff;text-decoration:none;border-right:1px solid #000;}
+.c_subNav li a.last {border-right:0;} 去掉左侧边框 
+
+.c_subNav table { width:100%; border-collapse:collapse;}
+.c_subNav ul ul { position:relative; display:none;  top:0px;}
+
+.c_subNav li ul li .option { padding:8px 0 8px 0;text-align:center; width: 145px;background:#3A4953;color:#fff;display:block; line-height:15px; border-bottom:1px solid #000; cursor:pointer;  zoom:1;}
+.c_subNav li ul li .option:hover { background:#146C9C;color:#fff;text-decoration:none;border-bottom:1px solid #000;}
+
+.c_subNav .li:hover { background:transparent;}
+.c_subNav .li:hover ul { display:block;}
+.c_subNav .li:hover ul { border:1px solid #ccc; border-width:1px 2px 2px 1px; width:135px; background:#fff; padding:1px;}
+.c_subNav .li:hover li { border-bottom:none;}
+
+*/
+.swj_menu{background:#3A4953;border:solid 0px black;height:30px;width:960px;margin:0 auto;cursor:default;}
+.swj_menu ul,li{list-style:none;padding:0; margin:0;}
+.swj_menu a{color:white;text-decoration:none;}
+.swj_menu ul li{float:left;width:100px;border-right:solid 1px black;background:#3A4953;height:30px;line-height:30px;text-align:center;vertical-align:bottom;display:block;}
+.swj_menu ul li ul {display:none;}
+.swj_menu ul li:hover{background:#146C9C;}
+.swj_menu ul li:hover ul{display:block;}
+.swj_menu ul li:hover ul li{border-top:solid 1px black;}

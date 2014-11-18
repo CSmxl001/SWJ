@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://order.xiaomi.com/cart/mini -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <link rel="stylesheet" type="text/css" href="xm.base.css">
+<script type="text/javascript" src="jquery.min.js"></script>
+<title>小米手机官网-小米手机官网 - Mini Cart</title>
+            </head>
+    <body style="">
+    <div class="container">
+	<div id="content">
+		<style type="text/css">#miniCartBox{padding:10px 20px 0;}.header_miniCart_li{padding:10px 0;float:none;border-bottom:1px dotted #f77824;}.header_miniCart_li a,.header_miniCart_li span,.header_miniCart_li strong,.header_miniCart_li label{display:block;float:left;padding-top:10px;color:#808080;line-height:16px;}.header_miniCart_li a:hover{text-decoration:underline;}.header_miniCart_li a.item1,.header_miniCart_li label.item1{width:40px;height:40px;padding:5px;border:1px solid #e1e1e1;}.header_miniCart_li a.item2,.header_miniCart_li label.item2{width:130px;padding:10px 20px 0 10px;}.header_miniCart_li span{width:25px;text-align:center;}.header_miniCart_li strong{width:55px;text-indent:10px;font-weight:normal;}.header_miniCart_li a.item3{float:right;color:#7e7e7e;}.header_miniCart_total{padding:15px 0;font-weight:bold;color:#696969;text-align:right;}#ajaxLoading{position:absolute;left:50%;margin-left:-100px;top:50%;margin-top:-20px;width:200px;height:40px;line-height:40px;display:none;text-align:center;color:#545351;filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#cccccc',endColorstr='#cccccc');background:rgba(204,204,204,0.6);}</style>
+        <p class="header_miniCart_nogood">购物车中还没有商品，赶紧选购吧！</p>
+        <div id="miniCartBox_hide" style="display: none;">
+        <p class="header_miniCart_nogood">您的购物车还是空的</p>
+        <p class="header_miniCart_total" cartgoods="0">共 0 件商品&nbsp;&nbsp;&nbsp;&nbsp;合计：¥0</p>
+    </div>
+<script>
+    var miniCart = {
+        iniData:{orderSiteTokenUnique:"http://order.xiaomi.com"},
+        getCookie:function(name){
+            var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
+            if (arr != null) return unescape(arr[2]);
+            return null;
+        },
+        loadHeight:function(){
+            var main = $(window.parent.document).find("#minicart");//找到iframe对象
+            var thisheight = $(document.body).height();//获取页面高度
+            //main.height(thisheight < 500 ? 500 : thisheight);//为iframe高度赋值如果高度小于500，则等于500，反之不限高，自适应
+            
+            /*if(thisheight > 500){
+                $(window.parent.document).find("#header_miniCart").css({"height":"500px"}).find("#minicart").css({"overflow-y":"auto"});
+            } else {
+                main.height(thisheight);
+            }*/
+            main.height(thisheight);
+        },
+        //删除购物车的回调函数
+        success:function(id,msg) {
+            $.getJSON("/cart/mini?ajax=minicart",function(data){
+                if(data.total > 0) {
+                    var id="#miniCartBox";
+                    $(id).replaceWith('<div id="miniCartBox">'+data.html+'</div>');
+                    /*var iframe = $(window.parent.document).find("#minicart"),
+                        sss = new Date().getTime(),
+                        iframeSrc = iframe.attr("src");
+                    iframe.src = iframe.attr("src",iframeSrc+"?"+sss);*/
+                    //cart goods numbers
+                    var cartGoodsNum = parseInt($(".header_miniCart_total").attr("cartgoods"));
+                    $(window.parent.document).find("#miniCartNum").html(cartGoodsNum);
+                } else {
+					$(window.parent.document).find("#miniCartNum").html(0);    
+                    /*$("#miniCartBox").hide();
+                    $("#miniCartBox_hide").show();*/
+                }
+                $(window.parent.document).find("#minicart").remove();
+                window.location.reload();
+            });
+			updateCart();
+        },
+        login:function(){
+            var loginObj = $("#minicart_login");
+            if(loginObj.length > 0){
+                window.parent.document.location.href="http://order.xiaomi.com/cart";
+                return false;
+            }
+        },
+        clearGoto:function(){
+            document.domain = "xiaomi.com";
+            $(window.parent.document).find(".header_miniCart_gocart").css({"display":"none"});
+        },
+        proxyiframe:function(){
+            var _this = this;
+            var iframesrc = this.iniData.orderSiteTokenUnique+"/user/proxy",
+                iframebody = "<iframe src='"+iframesrc+"' width='0' height='0' name='proxy' id='proxy' frameborder='0' scrolling='no'></iframe>";
+            $(document.body).append(iframebody);
+            $("iframe[name='proxy']").load(function(){
+                window.location.reload();
+                $(window.parent.document).find("#miniCartNum").text(miniCart.getCookie("xm_user_www_num"));
+            });
+        },
+        loadMinicart:function(){
+            $("#ajaxLoading").show();
+            $(window.parent.document).find("#minicart").height("80").load(function(){//绑定事件
+                miniCart.loadHeight();
+                $("#ajaxLoading").hide();
+            });
+            $("#minicart_login").bind("click",function(){
+                return miniCart.login();
+            })
+        }
+    }
+    //iframe load 计算高度
+    $(function(){
+        document.domain = "xiaomi.com";
+        //处理单点登录但在电商官网未登录加入购物车问题
+        if(typeof unLogined != "undefined" && miniCart.getCookie("userId")){
+            miniCart.proxyiframe();
+        } else {
+            miniCart.loadMinicart();
+        }
+        /*var cartGoodsNum = parseInt($(".header_miniCart_total").attr("cartgoods"));*/
+    })
+	function updateCart() {
+        window.parent.location.reload();
+    }
+    </script>
+	</div><!-- content -->
+</div>
+    
+
+
+</body></html>

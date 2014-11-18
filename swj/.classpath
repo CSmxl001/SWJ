@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="config"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.hibernate.MYECLIPSE_HIBERNATE3_3_CORE"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.hibernate.MYECLIPSE_HIBERNATE3_3_EM"/>
+	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/commons-beanutils-1.7.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/commons-codec-1.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/commons-collections-3.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/commons-configuration-1.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/commons-fileupload-1.2.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/commons-io-2.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/commons-lang-2.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/dom4j-1.6.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/freemarker-2.3.16.jar"/>
+	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/httpclient-4.1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/httpclient-cache-4.1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/httpcore-4.1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/httpmime-4.1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/jackson-1.9.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/javax.inject-1.jar"/>
+	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/jfreechart-1.0.14.jar"/>
+	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/jfreechart-experimental-1.0.14.jar"/>
+	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/jfreechart-swt-1.0.14.jar"/>
+	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/junit-3.8.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/log4j-1.2.14.jar"/>
+	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/msbase-msbase.jar"/>
+	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/mssqlserver-mssqlserver.jar"/>
+	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/msutil-msutil.jar"/>
+	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/servlet-api-2.5.jar" sourcepath="C:/Users/Administrator.lcl-PC/.m2/repository/org/mortbay/jetty/servlet-api/2.5-20081211/servlet-api-2.5-20081211-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/struts2-convention-plugin-2.2.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/struts2-core-2.2.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/xwork-core-2.2.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jtds-1.3.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre6"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/ASM-10~1.JAR"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/JSTL-1~1.JAR"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/OGNL-3~1.JAR"/>
+	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
+</classpath>
